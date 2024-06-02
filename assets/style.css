@@ -1,0 +1,46 @@
+html {
+    background: linear-gradient(177.52deg, #1b6894 2.11%, #646567 81.34%);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', 'sans-serif', 'Mansalva', cursive;
+}
+
+h1{
+   text-align: center;
+   color: aliceblue; 
+   font-family: 'Mansalva';
+   font-size: 40px;
+   font-weight: 400;
+}
+
+h2, footer {
+    font-family: 'Mansalva';
+}
+
+button {
+    border: none;
+}
+
+.itens-comprados {
+text-decoration: line-through;
+}
+
+.borda-lista {
+    border-bottom: dotted 2px blue;
+}
+
+input:disabled {
+    border: none;
+    background: none;
+    color: black;
+}
+
+input {
+    border: none;
+    background: none;
+    color: black;
+    margin-bottom: 2%;
+}
