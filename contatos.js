@@ -67,18 +67,19 @@ function mostrarContatos(){
                 </li>
             `
         } else {
-                ulContatos.innerHTML += `
-            <li class="item-compra is-flex is-justify-content-space-between" data-value="${index}">
-                <div>
-                    <input type="checkbox" class="is-clickable" />
-                    <input type="text" class="is-size-5" value="${elemento.valor}"></input>
-                    <input type="text" class="is-size-5" value="${elemento.celular}"></input>
-                </div>
-                <div>
-                    '<button onclick="salvarEdicao()"><i class="fa-regular fa-floppy-disk is-clickable"></i></button>'
-                    '<i class="fa-regular is-clickable fa-pen-to-square editar"></i>'
-                </div>
-            </li>`
+            ulContatos.innerHTML += `
+                <li class="item-compra is-flex is-justify-content-space-between" data-value="${index}">
+                    <div>
+                        <input type="checkbox" class="is-clickable" />
+                        <input type="text" class="is-size-5" value="${elemento.valor}"></input>
+                        <input type="text" class="is-size-5" value="${elemento.celular}"></input>
+                    </div>
+                    <div>
+                        <button onclick="salvarEdicao()"><i class="fa-regular fa-floppy-disk is-clickable"></i></button>
+                        <i class="fa-regular is-clickable fa-pen-to-square editar"></i>
+                    </div>
+                </li>`;
+        
         }
     })
 
@@ -115,7 +116,6 @@ function mostrarContatos(){
 
 function salvarEdicao(){
     const itemEditado = document.querySelector(`[data-value="${itemAEditar}"] input[type="text"]`)
-    //console.log(itemEditado.value);
     listaDeContatos[itemAEditar].valor = itemEditado.value;
     itemAEditar = -1;
     mostrarContatos();
