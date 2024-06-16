@@ -3,6 +3,6 @@
       "target": {
         "namespace": "android_app",
         "package_name": "io.github.felypedantas.twa",
-        "sha256_cert_fingerprints": ["07:6B:CF:72:7A:54:C0:FE:21:3B:49:66:F7:0A:D2:62:C4:45:54:7C:1F:14:B4:30:5C:B6:0E:76:9F:97:A9:A2"]
+        "sha256_cert_fingerprints": ["86:5C:4F:3A:43:A6:8A:F5:18:E9:4D:A7:EF:DC:30:F9:9F:7F:49:EE:AD:3F:7C:3F:54:FE:23:11:68:45:C3:D1"]
       }
     }]
