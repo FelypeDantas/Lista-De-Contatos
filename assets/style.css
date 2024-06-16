@@ -1,3 +1,4 @@
+/* Estilos gerais */
 html {
     background: linear-gradient(177.52deg, #1b6894 2.11%, #646567 81.34%);
     background-repeat: no-repeat;
@@ -6,41 +7,117 @@ html {
 
 body {
     font-family: 'Montserrat', 'sans-serif', 'Mansalva', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-h1{
-   text-align: center;
-   color: aliceblue; 
-   font-family: 'Mansalva';
-   font-size: 40px;
-   font-weight: 400;
+h1 {
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Mansalva';
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 h2, footer {
     font-family: 'Mansalva';
+    color: white;
 }
 
 button {
     border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
+button:hover {
+    opacity: 0.8;
+}
+
+/* Estilos para itens comprados */
 .itens-comprados {
-text-decoration: line-through;
+    text-decoration: line-through;
+    color: #888; /* Cor para itens comprados */
 }
 
+/* Estilos para lista de contatos */
 .borda-lista {
-    border-bottom: dotted 2px blue;
+    border-bottom: 1px dotted #ddd; /* Linha pontilhada para separar itens */
+    padding: 10px 0;
 }
 
-input:disabled {
-    border: none;
-    background: none;
-    color: black;
+.item-compra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-input {
-    border: none;
-    background: none;
-    color: black;
-    margin-bottom: 2%;
+.item-compra input[type="checkbox"] {
+    margin-right: 10px;
 }
+
+.item-compra input[type="text"] {
+    border: none;
+    background-color: transparent;
+    color: #333;
+    width: 50%; /* Ajuste conforme necessário */
+    padding: 5px;
+    font-size: 16px;
+}
+
+.item-compra button {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.item-compra button:hover {
+    color: #666;
+}
+
+/* Estilos para o formulário de entrada */
+#form-itens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    max-width: 300px; /* Ajuste conforme necessário */
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Efeito de foco mais evidente */
+}
+
+/* Estilo para o footer */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Estilos para responsividade */
+@media (max-width: 768px) {
+    .input {
+        max-width: 100%;
+    }
+}
+
