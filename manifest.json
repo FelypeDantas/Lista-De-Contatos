@@ -576,6 +576,23 @@
     "productivity",
     "utilities"
   ],
+  "screenshots": [
+    {
+      "src": "./assets/img/Screenshot1.png",
+      "type": "image/png",
+      "sizes": "1884x879"
+    },
+    {
+      "src": "./assets/img/Screenshot2.png",
+      "type": "image/png",
+      "sizes": "1876x873"
+    },
+    {
+      "src": "./assets/img/Screenshot3.png",
+      "type": "image/png",
+      "sizes": "1828x835"
+    }
+  ],
   "share_target": {
     "method": "GET",
     "action": "/",
