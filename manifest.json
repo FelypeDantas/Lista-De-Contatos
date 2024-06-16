@@ -1,0 +1,27 @@
+{
+    "background_color": "#21639f",
+    "dir": "ltr",
+    "display": "standalone",
+    "name": "Lista de contatos",
+    "orientation": "any",
+    "scope": "/",
+    "short_name": "Lista de contatos",
+    "start_url": "/",
+    "theme_color": "#ffffff",
+    "description": "Para listar contatos de pessoas",
+    "lang": "pt",
+    "categories": [
+      "productivity",
+      "utilities"
+    ],
+    "share_target": {
+      "method": "GET",
+      "action": "https://felypedantas.github.io/Lista-De-Contatos/",
+      "params": {
+        "title": "Lista de contatos",
+        "text": "Anotar contatos",
+        "url": "https://felypedantas.github.io/Lista-De-Contatos/",
+        "files": []
+      }
+    }
+  }
