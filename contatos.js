@@ -56,7 +56,7 @@ function salvarItem(){
         alert("Número de celular inválido. Por favor, insira um número válido com 9 dígitos(sem DD incluso).");
         return;
     }
-
+  
     const checarDuplicado = listaDeContatos.some((elemento) => elemento.valor.toUpperCase() === contato.toUpperCase());
     const checarNumeroDuplicado = listaDeContatos.some((elemento) => elemento.celular === numero);
 
