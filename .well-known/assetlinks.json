@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.felypedantas.twa",
+        "sha256_cert_fingerprints": ["07:6B:CF:72:7A:54:C0:FE:21:3B:49:66:F7:0A:D2:62:C4:45:54:7C:1F:14:B4:30:5C:B6:0E:76:9F:97:A9:A2"]
+      }
+    }]
