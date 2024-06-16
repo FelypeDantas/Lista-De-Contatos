@@ -6,15 +6,28 @@ const itensInput = document.getElementById("receber-item");
 const contatoInput = document.getElementById("receber-contato");
 const ulContatos = document.getElementById("lista-de-itens");
 const ulContatosApagados = document.getElementById("itens-comprados");
-const listaRecuperada = localStorage.getItem('listaDeContatos')
+const listaRecuperada = localStorage.getItem('listaDeContatos');
 
 function atualizaLocalStorage(){
-    localStorage.setItem('listaDeContatos', JSON.stringify(listaDeContatos))
+    try{
+        localStorage.setItem('listaDeContatos', JSON.stringify(listaDeContatos));
+    } catch(error){
+        console.error('Erro ao salvar no localStorage:', error.message);
+        alert('Não foi possível salvar no armazenamento local. Por favor, tente novamente mais tarde.');
+    }
+   
 }
 
 if(listaRecuperada){
-    listaDeContatos = JSON.parse(listaRecuperada);
-    mostrarContatos();
+    try{
+        listaDeContatos = JSON.parse(listaRecuperada);
+        mostrarContatos();
+    } catch(error){
+        console.error('Erro ao recuperar lista do localStorage:', error.message);
+        alert('Não foi possível recuperar a lista de contatos do armazenamento local. Por favor, recarregue a página.');
+        listaDeContatos = [];
+    }
+
 } else {
     listaDeContatos = [];
 }
