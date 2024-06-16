@@ -15,8 +15,8 @@
       "utilities"
     ],
     "share_target": {
+      "action": "/",
       "method": "GET",
-      "action": "https://felypedantas.github.io/Lista-De-Contatos/",
       "params": {
         "title": "Lista de contatos",
         "text": "Anotar contatos",
