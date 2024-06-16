@@ -41,8 +41,21 @@ form.addEventListener("submit" , function(evento) {
 });
 
 function salvarItem(){
-    const contato = itensInput.value
-    const numero = contatoInput.value
+    const contato = itensInput.value.trim();
+    const numero = contatoInput.value.trim();
+
+    // Validar se os campos não estão vazios
+    if (contato === '' || numero === '') {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    // Validar formato do número de celular (neste exemplo, 9 dígitos)
+    const regexNumero = /^\d{9}$/;
+    if (!regexNumero.test(numero)) {
+        alert("Número de celular inválido. Por favor, insira um número válido com 9 dígitos(sem DD incluso).");
+        return;
+    }
 
     const checarDuplicado = listaDeContatos.some((elemento) => elemento.valor.toUpperCase() === contato.toUpperCase());
     const checarNumeroDuplicado = listaDeContatos.some((elemento) => elemento.celular === numero);
@@ -59,6 +72,8 @@ function salvarItem(){
 
         itensInput.value = '';
         contatoInput.value = '';
+        atualizaLocalStorage();
+        mostrarContatos();
     }
 }
 
